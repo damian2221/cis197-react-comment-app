@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import PostsBlock from './PostsBlock'
 import Reply from './Reply'
 import Voter from './Voter'
 
@@ -18,7 +17,9 @@ const MainLevelPost = styled.div`
   margin-top: 20px;
 `
 
-const Post = ({ name, content, depth }) => {
+const Post = ({
+  PostsBlock, name, content, depth,
+}) => {
   const [replies, setReplies] = useState([])
 
   const PostElement = (

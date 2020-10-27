@@ -8,7 +8,13 @@ const PostsBlock = ({ posts, depth }) => {
       {posts.map(post => {
         postIndex += 1
         return (
-          <Post key={`${postIndex}.${depth}`} name={post.name} content={post.content} depth={depth} />
+          <Post
+            PostsBlock={PostsBlock}
+            key={`${postIndex}.${depth}`}
+            name={post.name}
+            content={post.content}
+            depth={depth}
+          />
         )
       })}
     </div>
